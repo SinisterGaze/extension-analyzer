@@ -34,7 +34,7 @@ def get_ext_types(PATH):
 
     return count_frequency(ext_types)
 
-def display(ext_dict):
+def display_results(ext_dict):
     print(f"Type    -   Frequency")
     print(f"---------------------")
     for ext, freq in ext_dict.items():
@@ -47,4 +47,4 @@ def display(ext_dict):
 if __name__ == "__main__":
     DIR_PATH = input("Enter the desired path to analyze: ")
     exts = sort_dict(get_ext_types(DIR_PATH))
-    display(exts)
+    display_results(exts)
