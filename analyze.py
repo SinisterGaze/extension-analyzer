@@ -1,4 +1,5 @@
-import os 
+import os
+
 
 def find_extension(file):
     index = file.rfind('.')
@@ -7,19 +8,22 @@ def find_extension(file):
     else:
         return ""
 
+
 def count_frequency(elements):
     counter = {}
     for item in elements:
         if item in counter:
-            counter[item]+=1
+            counter[item] += 1
         else:
             counter[item] = 1
     return counter
 
-def sort_dict(d, reverse = True):
-    keys = sorted(d, key = d.get, reverse=reverse)
+
+def sort_dict(d, reverse=True):
+    keys = sorted(d, key=d.get, reverse=reverse)
     values = sorted(d.values(), reverse=reverse)
-    return dict(zip(keys,values))
+    return dict(zip(keys, values))
+
 
 def get_ext_types(PATH):
     os.chdir(PATH)
@@ -34,14 +38,12 @@ def get_ext_types(PATH):
 
     return count_frequency(ext_types)
 
+
 def display_results(ext_dict):
     print(f"Type    -   Frequency")
     print(f"---------------------")
     for ext, freq in ext_dict.items():
         print(f"{ext}    -    {freq}")
-
-
-
 
 
 if __name__ == "__main__":
