@@ -1,5 +1,6 @@
 import os
 
+
 def find_extension(file):
     index = file.rfind('.')
     if index != -1:
